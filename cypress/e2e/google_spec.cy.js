@@ -28,6 +28,6 @@ describe("Google Search Test", () => {
     cy.get('textarea[name="q"]').type("Abdullatif sofuoğlu");
     cy.get('textarea[name="q"]').type("{enter}");
     cy.url().should("include", "search");
-    cy.contains("Sputnik").click();
+    cy.contains("Abdüllatif Şener").click();
   });
 });
