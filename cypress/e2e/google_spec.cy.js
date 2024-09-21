@@ -20,7 +20,7 @@ describe("Google Search Test", () => {
     cy.get('textarea[name="q"]').type("Abdullatif Sofuoğlu");
     cy.get('textarea[name="q"]').type("{enter}");
     cy.url().should("include", "search");
-    cy.contains("Vergi").click();
+    cy.get('a[href*="vknsorgula"]').click();
   });
 
   it("Abdüllatif Şener", () => {
