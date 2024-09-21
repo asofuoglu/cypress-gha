@@ -23,11 +23,19 @@ describe("Google Search Test", () => {
     cy.get('a[href*="vknsorgula"]').click();
   });
 
+  it("Kentsel", () => {
+    cy.visit("https://www.google.com");
+    cy.get('textarea[name="q"]').type("Abdullatif Sofuoğlu");
+    cy.get('textarea[name="q"]').type("{enter}");
+    cy.url().should("include", "search");
+    cy.get('a[href*="Kentsel"]').click();
+  });
+
   it("Abdüllatif Şener", () => {
     cy.visit("https://www.google.com");
     cy.get('textarea[name="q"]').type("Abdullatif Sofuoğlu");
     cy.get('textarea[name="q"]').type("{enter}");
     cy.url().should("include", "search");
-    cy.contains("Abdüllatif Şener").click();
+    cy.get('a[href*="sener"]').click();
   });
 });
