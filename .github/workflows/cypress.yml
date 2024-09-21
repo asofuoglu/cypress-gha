@@ -1,6 +1,10 @@
 name: Cypress Tests
 
-on: [push, pull_request]
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # This runs the workflow every 5 minutes
+  push:
+  pull_request:
 
 jobs:
   cypress:
