@@ -9,7 +9,7 @@ describe("Google Search Test", () => {
 
   it("Applause", () => {
     cy.visit("https://www.google.com");
-    cy.get('textarea[name="q"]').type("Abdullatif sofuoğlu");
+    cy.get('textarea[name="q"]').type("Abdullatif Sofuoğlu");
     cy.get('textarea[name="q"]').type("{enter}");
     cy.url().should("include", "search");
     cy.contains("Applause").click();
@@ -17,7 +17,7 @@ describe("Google Search Test", () => {
 
   it("Vergi", () => {
     cy.visit("https://www.google.com");
-    cy.get('textarea[name="q"]').type("Abdullatif sofuoğlu");
+    cy.get('textarea[name="q"]').type("Abdullatif Sofuoğlu");
     cy.get('textarea[name="q"]').type("{enter}");
     cy.url().should("include", "search");
     cy.contains("Vergi").click();
@@ -25,7 +25,7 @@ describe("Google Search Test", () => {
 
   it("Abdüllatif Şener", () => {
     cy.visit("https://www.google.com");
-    cy.get('textarea[name="q"]').type("Abdullatif sofuoğlu");
+    cy.get('textarea[name="q"]').type("Abdullatif Sofuoğlu");
     cy.get('textarea[name="q"]').type("{enter}");
     cy.url().should("include", "search");
     cy.contains("Abdüllatif Şener").click();
